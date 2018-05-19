@@ -1,0 +1,13 @@
+spring:
+  application:
+  name: nlp-server
+server:
+  port: 8031
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
